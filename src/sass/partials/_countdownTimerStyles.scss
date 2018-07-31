@@ -1,0 +1,101 @@
+$bp768: 768px;
+$bp640: 640px;
+$bp1280: 1280px;
+
+// .countdown-timer {
+//   // width: 480px;
+//   text-align: center;
+//   // color: #ffffff;
+//   // text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+//   // background: #a5a6a7; /* IE9 fallback */
+//   // background-image: linear-gradient(97deg, #64ecba, #008de7);
+//   // margin-bottom: 5px;
+//   color: #e40046;
+//   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+//   background: white;
+//   padding: 12px 0 13px 0;
+//   font-size: 14px;
+//   letter-spacing: 1px;
+//   box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.65);
+//
+//
+//   @include breakpoint($bp){
+//     margin-bottom: 0;
+//     box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.25);
+//     padding: 20px 0 25px 0;
+//     font-size: 18px;
+//     letter-spacing: 1px;
+//   }
+// }
+
+.countdown-timer__wrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  background: rgba(0, 0, 0, 0.96);
+  @include breakpoint(768px) {
+    background: #c50839;
+  }
+}
+
+.countdown-timer {
+  text-align: center;
+  color: #ffb520;
+  text-shadow: 1px 1px 1px rgba(255, 0, 0, 0.14);
+  padding: 12px 0 13px 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+  @include breakpoint($bp640){
+    font-size: 16px;
+  }
+  @include breakpoint($bp768){
+    color: white;
+    text-shadow: 1px 1px 1px rgba(255, 0, 0, 0.74);
+    padding: 10px 0;
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+  @include breakpoint($bp1280){
+    padding: 14px 0;
+  }
+}
+
+
+.countdown-timer__title {
+  display: inline-block !important;
+  width: 62px;
+  @include breakpoint($bp640){
+    width: 70px;
+  }
+  @include breakpoint($bp768){
+    width: 80px;
+  }
+}
+
+.countdown-timer__time {
+  display: inline-block !important;
+  box-sizing: border-box;
+  width: 60px;
+  @include breakpoint($bp640){
+    width: 70px;
+  }
+  @include breakpoint($bp768){
+    width: 78px;
+  }
+}
+
+.countdown-timer--bold {
+  letter-spacing: 0;
+  font-family: font-bold;
+  font-size: 16px;
+  @include breakpoint($bp640){
+    font-size: 18px;
+  }
+  // @include breakpoint($bp768){
+  //   font-size: 20px;
+  // }
+  @include breakpoint($bp1280){
+    font-size: 24px;
+  }
+}
